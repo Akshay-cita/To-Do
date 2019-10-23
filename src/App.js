@@ -8,8 +8,11 @@ function App() {
   const hour = date.getHours();
   
   return (
-    <div className="FirstDiv">
+    <div className="todo-list">
     <h1>Hi, It is {date.getHours() %12}'O clock already! </h1>
+      <Todo />
+      <Todo />
+      <Todo />
       <Todo />
       <Todo />
       <Todo /> 

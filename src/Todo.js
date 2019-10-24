@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 import { tsPropertySignature } from "@babel/types";
 
 function Todo(props) {
-    return (<div class = "todo-item"><input type="checkbox"/>
+    return (<div class = "todo-item">
+    <input type="checkbox" checked={props.completed}/>
     <p>{props.todo}</p>
     </div>)
 }

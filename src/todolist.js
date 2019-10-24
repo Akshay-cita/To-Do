@@ -2,7 +2,7 @@ const TodoList = [
     {
         id:1,
         todo: "Do something special",
-        completed: true
+        completed: false
     },
 
     {

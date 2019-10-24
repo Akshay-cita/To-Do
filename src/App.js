@@ -2,20 +2,15 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Todo from './Todo';
+import TodoList from './todolist';
 
 function App() {
   const date = new Date();
-  const hour = date.getHours();
-  
+  const todolist = TodoList.map(todo_list => <Todo key={todo_list.id} todo={todo_list.todo} /> )
   return (
     <div className="todo-list">
     <h1>Hi, It is {date.getHours() %12}'O clock already! </h1>
-      <Todo todo="Do something special"/>
-      <Todo todo="Do something adventurous"/>
-      <Todo todo="Do something dangerous"/>
-      <Todo todo="Do something daily"/>
-      <Todo todo="Do something interesting"/>
-      <Todo todo="Do something different"/> 
+      {todolist}
     </div>
     
   );

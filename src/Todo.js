@@ -1,9 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { tsPropertySignature } from "@babel/types";
 
-function Todo() {
+function Todo(props) {
     return (<div class = "todo-item"><input type="checkbox"/>
-    <p>Did you do this?</p>
+    <p>{props.todo}</p>
     </div>)
 }
 export default Todo;

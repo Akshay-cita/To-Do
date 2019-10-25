@@ -11,16 +11,37 @@ class App extends React.Component {
       todo: TodoList
     
   }
+  this.handleChange = this.handleChange.bind(this);
   }
+
+  handleChange(id) {
+      this.setState(prevState => {
+        const Updated = prevState.todo.map( todo => {
+          if (todo.id === id) {
+            todo.completed = !todo.completed;
+          }
+          return todo;
+        })
+        return {
+          todo:Updated
+        };
+      })
+      console.log("updated " ,id)
+  }
+  
   render()
   {
+    function handleClick() {
+      console.log("Button Clicked")
+    }
     const date = new Date();
-    const todolist = this.state.todo.map(todo_list => <Todo key={todo_list.id} todo={todo_list.todo} completed={todo_list.completed} /> )
+    const todolist = this.state.todo.map(todo_item => <Todo key={todo_item.id} todo={todo_item} handleChange={this.handleChange}/> )
     
     return (
     <div className="todo-list">
     <h1>Hi, It is {date.getHours() %12}'O clock already! </h1>
       {todolist}
+      <button onClick={handleClick} > Submit </button>
     </div>
     
   );

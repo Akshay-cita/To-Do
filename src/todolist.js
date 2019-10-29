@@ -2,33 +2,33 @@ const TodoList = [
     {
         id:1,
         todo: "Do something special",
-        completed: false
+        completed:false
     },
 
     {
         id:2,
         todo: "Do something adventurous",
-        completed: true
+        completed: false
     },
     {
         id:3,
         todo: "Do something dangerous",
-        completed: true
+        completed: false
     },
     {
         id:4,
         todo: "Do something daily",
-        completed: true
+        completed: false
     },
     {
         id:5,
         todo: "Do something interesting",
-        completed: true
+        completed: false
     },
     {
         id:6,
         todo: "Do something different",
-        completed: true
+        completed: false
     }
 ]
 export default TodoList;

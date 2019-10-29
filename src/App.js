@@ -20,7 +20,9 @@ class App extends React.Component {
           if (todo.id === id) {
             return {
               ...todo,
-              completed: !todo.completed
+                            
+              completed: !todo.completed,
+              style: !todo.completed?{ color:"green", fontWeight:"bold", textDecoration:"line-through" } : null
             }
           }
           return todo;

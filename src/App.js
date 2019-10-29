@@ -22,7 +22,7 @@ class App extends React.Component {
               ...todo,
                             
               completed: !todo.completed,
-              style: !todo.completed?{ color:"green", fontWeight:"bold", textDecoration:"line-through" } : null
+              
             }
           }
           return todo;

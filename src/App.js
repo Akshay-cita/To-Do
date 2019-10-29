@@ -44,7 +44,7 @@ class App extends React.Component {
     
     return (
     <div className="todo-list">
-    <h1>Hi, It is {date.getHours() %12}'O clock already! </h1>
+    <h3>Hi, It is {date.getHours() %12}'O clock already! </h3>
       {todolist}
       <button onClick={handleClick} > Submit </button>
     </div>
